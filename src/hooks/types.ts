@@ -22,29 +22,6 @@ export type TokenPayment$Gate = {
   decimals: number;
 };
 
-// export type SolPayment = {
-//   type: "sol";
-//   amount: number;
-//   decimals: number;
-// };
-
-// export type TokenPayment = {
-//   type: "token";
-//   mint: PublicKey;
-//   amount: number;
-//   symbol?: string;
-//   decimals: number;
-// };
-
-// export type NftPayment = {
-//   type: "nft";
-//   nfts: Metadata[];
-// };
-
-// export type PaymentGuard = {
-//   criteria: "pay" | "have";
-// } & (SolPayment | TokenPayment | NftPayment);
-
 export type GuardGroup = {
   // address: PublicKey;
   startTime?: Date;

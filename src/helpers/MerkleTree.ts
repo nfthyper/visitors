@@ -118,12 +118,4 @@ export class MerkleTree<T = any> {
     return pair.equals(this.getRoot());
   }
 
-  //   static verifyClaim(leaf: Buffer, proof: Buffer[], root: Buffer): boolean {
-  //     let pair = MerkleTree.nodeHash(leaf);
-  //     for (const item of proof) {
-  //       pair = MerkleTree.internalHash(pair, item);
-  //     }
-
-  //     return pair.equals(root);
-  //   }
 }

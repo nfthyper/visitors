@@ -37,8 +37,9 @@ import { guardToLimitUtil } from "./hooks/utils";
 
 const Header = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
+  
 `;
 const WalletContainer = styled.div`
   display: flex;
@@ -48,7 +49,7 @@ const WalletContainer = styled.div`
   margin: 30px;
   z-index: 999;
   position: relative;
-
+  
   .wallet-adapter-dropdown-list {
     background: #ffffff;
   }
@@ -67,7 +68,7 @@ const WalletAmount = styled.div`
   min-width: 48px;
   min-height: auto;
   border-radius: 5px;
-  background-color: #85b1e2;
+  background-color: #e6e6e6;
   box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
     0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
   box-sizing: border-box;
@@ -101,6 +102,20 @@ const ConnectButton = styled(WalletMultiButton)`
   background-color: #fff;
   color: #000;
   margin: 0 auto;
+  :hover {
+    border: 1px solid white;  
+    outline: none !important;
+    background: #000000 !important;
+    color: #fff;
+  }
+  :not(disabled) {
+    cursor: pointer;
+  }
+
+  :not(disabled):hover {
+    outline: 1px solid var(--title-text-color);
+  }
+  
 `;
 
 const Card = styled(Paper)`
@@ -114,6 +129,9 @@ const Card = styled(Paper)`
   }
 `;
 
+const ConnectButtonWithBorder = styled(ConnectButton)`
+  border: 4px solid #000;
+`;
 export interface HomeProps {
   candyMachineId: PublicKey;
 }
@@ -280,24 +298,25 @@ const Home = (props: HomeProps) => {
     <main>
       <>
         <Header>
-          {/* <Link href='/'>
+          {<Link href='/'>
             <img
               style={{
                 filter: 'invert(1)',
                 maxWidth: '200px',
-                marginLeft: 30,
+                marginLeft: 10,
                 marginTop: 10,
+                
               }}
-              src='/logo.png'
+              src='/let.png'
               alt='logo'
             />
-          </Link> */}
+          </Link>}
           <WalletContainer>
             <Wallet>
               {wallet ? (
                 <WalletAmount>
                   {(balance || 0).toLocaleString()} SOL
-                  <ConnectButton />
+                  <ConnectButtonWithBorder  />
                 </WalletAmount>
               ) : (
                 <ConnectButton>Connect Wallet</ConnectButton>

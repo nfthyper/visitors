@@ -66,15 +66,16 @@ export default function NftsModal({
       aria-labelledby="alert-dialog-slide-title"
       aria-describedby="alert-dialog-slide-description"
       maxWidth={"md"}
+       
     >
-      <DialogTitle id="alert-dialog-slide-title">
-        Nfts you had just minted!
+      <DialogTitle id="alert-dialog-slide-title" style={{ textAlign: "center" }}>
+      Minting was successfull. Enjoy the Ride!
       </DialogTitle>
-      <DialogContent>
+      <DialogContent style={{ backgroundImage: `url('/modalBackground.png')` }}>
         <DialogContentText id="alert-dialog-slide-description">
-          <Grid container spacing={1}>
+          <Grid container spacing={1} justify={mintedItems.length === 1 ? "center" : undefined} >
             {mintedItems.map((nft, key) => (
-              <Grid item xs={4} key={key}>
+              <Grid item xs={6} key={key} style={{ backgroundColor: 'white' }}>
                 <Card>
                   <CardActionArea>
                     {nft.json.image && (

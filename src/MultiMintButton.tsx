@@ -17,6 +17,11 @@ export const CTAButton = styled(Button)`
   font-size: 1em !important;
   font-family: "Patrick Hand", cursive;
   font-weight: bold !important;
+  :hover {
+    border: none;
+    outline: none !important;
+    background: #d09a69 !important;
+  }
 `;
 
 export const Minus = styled.button`
@@ -57,7 +62,7 @@ export const NumericField = styled.input`
   font-size: 2em !important;
   padding: 0;
   vertical-align: middle;
-  background-color: var(--main-text-color);
+  background-color: var(--main-text-color);   
   box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
     0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
   box-sizing: border-box;

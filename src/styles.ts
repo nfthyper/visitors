@@ -647,7 +647,7 @@ export const Heading = styled('h1')`
 `;
 export const MintButtonStyled = styled('button')`
   border: 0.1px solid #424242;
-  background: #000000b0;
+  background: #ce9764;
   border-radius: 10px;
   padding: 6px;
   font-size: 28px;

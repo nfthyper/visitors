@@ -1,14 +1,51 @@
 {
-  "number": 300,
-  "symbol": "F00K",
+  "number": 1000,
+  "symbol": "Monkies",
   "sellerFeeBasisPoints": 500,
   "isMutable": true,
   "isSequential": false,
   "creators": [
     {
-      "address": "5PCFZP3pNXxYwWrr84qxm9UMpbmVq7Mi8PM5QKBeQxKQ",
+      "address": "b3FKcYzKjsee6L2AvsQgH2qbqG1KnCkPBaLtenkkHMt",
       "share": 100
     }
   ],
-  "uploadMethod": "bundlr"
+  "uploadMethod": "nft_storage",
+  "awsConfig": null,
+  "nftStorageAuthToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ5NUM0NTU1MmQzRjAwQ2Q0NDA3RmIxMTA1ODJhM0NmMTNBNDc2QTYiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY4MDc0ODYwNjQ0MywibmFtZSI6Ik1vbmtpZXMifQ.favf8zG7nEVOgHQTpTXkDtCuNocpurJ5TxdYlFPjROM",
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": {
+    "name": "Monkies ",
+    "uri": "https://bafybeig3uhasrbn6trd5obgnozipvnsk7foouhhxyotu3h4j6xp3p53xyq.ipfs.nftstorage.link/hidden.json",
+    "hash": "wmbJYxeoaCiXYBxH4dJ5KdKcQSrMYZRY"
+  },
+  "guards": {
+    "default": {
+      "botTax": null,
+      "solPayment": {
+        "value": 0.5,
+        "destination": "b3FKcYzKjsee6L2AvsQgH2qbqG1KnCkPBaLtenkkHMt"
+      },
+      "tokenPayment": null,
+      "startDate": {
+        "date": "2022-10-20 18:00:00 +0000"
+      },
+      "thirdPartySigner": null,
+      "tokenGate": null,
+      "gatekeeper": null,
+      "endDate": null,
+      "allowList": null,
+      "mintLimit": null,
+      "nftPayment": null,
+      "redeemedAmount": null,
+      "addressGate": null,
+      "nftGate": null,
+      "nftBurn": null,
+      "tokenBurn": null,
+      "freezeSolPayment": null,
+      "freezeTokenPayment": null
+    },
+    "groups": null
+  }
 }

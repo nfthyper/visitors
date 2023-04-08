@@ -61,11 +61,27 @@ code {
 
 
 .wallet-adapter-modal-wrapper {
-  background: #ffffff;
+  background-image: url('/wall.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wallet-adapter-modal-title {
+  color: #ae7137   !important; 
+  font-family: 'LuckiestGuy'!important;
+}
+.wallet-adapter-dropdown-list-item:hover {
+  background-color: #d09a69!important; /* set the background color on hover */
+
 }
 
 .wallet-adapter-button {
-  background-color: #000000;
+  background-color: #000000; 
+}
+.wallet-adapter-button:hover {
+  background-color: black !important;
+  color: #d09a69;
+  border: 2.8px solid white
 }
 
 .wallet-adapter-modal-list {
