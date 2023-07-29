@@ -5,6 +5,7 @@ import {
 } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import {
+  BackpackWalletAdapter,
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SafePalWalletAdapter,
@@ -54,11 +55,12 @@ const Main = ({}) => {
   // of wallets that your users connect to will be loaded.
   const wallets = useMemo(
     () => [
-      new LedgerWalletAdapter(),
+      new BackpackWalletAdapter(),
+      new SolflareWalletAdapter({ network }),
       new PhantomWalletAdapter(),
+      new LedgerWalletAdapter(),
       new SafePalWalletAdapter(),
       new SlopeWalletAdapter({ network }),
-      new SolflareWalletAdapter({ network }),
       new SolletExtensionWalletAdapter(),
       new SolletWalletAdapter(),
       new SolongWalletAdapter(),

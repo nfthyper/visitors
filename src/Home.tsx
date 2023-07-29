@@ -350,7 +350,7 @@ const Home = (props: HomeProps) => {
               </Heading>
 
               <p>
-                5000 R3pt1l1ans fuck1nG 4round in th3 web3.
+                N0T 0nlY a Sh1t c01n, bu7 5000 R3pt1l1ans fuck1nG 4round in th3 web3.
               </p>
 
               {guardStates.isStarted && (
@@ -451,6 +451,14 @@ const Home = (props: HomeProps) => {
               </div>
             </div>
           </NftWrapper2>
+
+          <div className="tokenomics" style={{ marginTop: '100px' }}>
+  <h2 style={{ textAlign: 'center', fontSize: '2em', fontFamily: 'Patrick Hand, cursive' }}>TOKENOMICS</h2>
+  <div style={{ textAlign: 'center', marginTop: '50px', marginBottom: '100px' }}>
+  <img src="pnacult.png" alt="Example image" />
+</div>
+</div>
+
         </Root>
       </>
       <Snackbar
