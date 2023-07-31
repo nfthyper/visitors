@@ -14,7 +14,7 @@ import styled from "styled-components";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 import { defaultGuardGroup, network } from "./config";
 
-import { MultiMintButton } from "./MultiMintButton";
+import { MultiMintButton, CTAButton } from "./MultiMintButton";
 import {
   Heading,
   Hero,
@@ -118,6 +118,28 @@ const ConnectButton = styled(WalletMultiButton)`
   
 `;
 
+const ClaimButton = styled(CTAButton)`
+  border-radius: 5px !important;
+  padding: 6px 16px;
+  background-color: #fff;
+  color: #000;
+  margin: 0 auto;
+  :hover {
+    border: 1px solid white;  
+    outline: none ;
+    background: #000000 ;
+    color: #fff;
+  }
+  :not(disabled) {
+    cursor: pointer;
+  }
+
+  :not(disabled):hover {
+    outline: 1px solid var(--title-text-color);
+  }
+  
+`;
+
 const Card = styled(Paper)`
   display: inline-block;
   background-color: var(--countdown-background-color) !important;
@@ -132,6 +154,8 @@ const Card = styled(Paper)`
 const ConnectButtonWithBorder = styled(ConnectButton)`
   border: 4px solid #000;
 `;
+
+
 export interface HomeProps {
   candyMachineId: PublicKey;
 }
@@ -294,6 +318,16 @@ const Home = (props: HomeProps) => {
     />
   );
 
+  const [alertOpen, setAlertOpen] = useState(false);
+
+  const handleClaimButtonClick = () => {
+    setAlertOpen(true); // Define o estado do alerta como aberto
+  };
+
+  const handleCloseAlert = () => {
+    setAlertOpen(false); // Define o estado do alerta como fechado
+  };
+
   return (
     <main>
       <>
@@ -454,10 +488,22 @@ const Home = (props: HomeProps) => {
 
           <div className="tokenomics" style={{ marginTop: '100px' }}>
   <h2 style={{ textAlign: 'center', fontSize: '2em', fontFamily: 'Patrick Hand, cursive' }}>TOKENOMICS</h2>
-  <div style={{ textAlign: 'center', marginTop: '50px', marginBottom: '100px' }}>
+  <div style={{ textAlign: 'center', marginTop: '50px', marginBottom: '50px' }}>
   <img src="pnacult.png" alt="Example image" />
 </div>
-</div>
+
+<div style={{ textAlign: "center" }}>
+        <ClaimButton onClick={handleClaimButtonClick}>Claim Airdrop</ClaimButton>
+      </div>
+      {/* Exibir o alerta personalizado */}
+      <Snackbar open={alertOpen} autoHideDuration={4000} onClose={handleCloseAlert}>
+        <Alert onClose={handleCloseAlert} severity="warning">
+          Collection haven't Sold out !
+        </Alert>
+      </Snackbar>
+      <div style={{ marginBottom: "100px" }}></div>
+    </div>
+
 
         </Root>
       </>
